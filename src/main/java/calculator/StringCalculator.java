@@ -28,7 +28,7 @@ public class StringCalculator {
 			}
 			
 			if(text.contains(";") && text.contains(",")) {
-				String values[] = text.split(",||;");				//ERROR !
+				String values[] = text.split(",|;");
 				int sum = 0;
 				for(String value : values) {
 					sum += Integer.parseInt(value);

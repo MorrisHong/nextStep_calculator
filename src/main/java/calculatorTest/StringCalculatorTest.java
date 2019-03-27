@@ -28,7 +28,7 @@ public class StringCalculatorTest {
 		
 	}
 	@Test
-	public void add쉼표세미콜론구분자() {
+	public void add쉼표와세미콜론함께쓰는구분자() {
 		assertEquals(8, cal.add("1,3;4"));
 	}
 	
