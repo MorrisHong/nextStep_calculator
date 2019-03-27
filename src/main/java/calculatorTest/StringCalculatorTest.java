@@ -23,6 +23,11 @@ public class StringCalculatorTest {
 	}
 	
 	@Test
+	public void add_숫자하나() {
+		assertEquals(1, cal.add("1"));
+	}
+	
+	@Test
 	public void add쉼표구분자(){
 		assertEquals(3, cal.add("1,2"));
 		
@@ -35,6 +40,11 @@ public class StringCalculatorTest {
 	@Test
 	public void add_custom() {
 		assertEquals(9, cal.add("//-\n2-3-4"));
+	}
+	
+	@Test(expected = RuntimeException.class)
+	public void add_negative() throws Exception {
+		cal.add("-1,2;3");
 	}
 	
 
