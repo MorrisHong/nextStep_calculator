@@ -36,8 +36,8 @@ public class StringCalculator {
 				return sum;
 			}
 			
-			if(text.contains("//(.)\n")) {
-				Matcher m = Pattern.compile("//(.)\n(.*)").matcher(text);
+			Matcher m = Pattern.compile("//(.)\n(.*)").matcher(text);
+			
 				if(m.find()) {
 					String delimiterString = m.group(1);
 					String[] values = m.group(2).split(delimiterString);
@@ -47,7 +47,6 @@ public class StringCalculator {
 					}
 					return sum;
 				}
-			}
 		return Integer.parseInt(text);
 		
 	}
